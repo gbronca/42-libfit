@@ -6,7 +6,7 @@
 #    By: gcouto-b <gcouto-b@student.42lausanne.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/28 09:49:06 by gcouto-b          #+#    #+#              #
-#    Updated: 2026/10/14 14:56:51 by gcouto-b         ###   ########.fr        #
+#    Updated: 2026/10/14 15:31:32 by gcouto-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-INCLUDES = -I include
 SRCS = ft_bzero.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
@@ -67,7 +66,7 @@ RM = rm -f
 all: $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
